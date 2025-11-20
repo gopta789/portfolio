@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen | System.Root</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#000000',
+                        surface: '#0c0c0c',
+                        primary: '#f59e0b', // Retro Amber
+                        secondary: '#b45309', // Darker Amber
+                        accent: '#333333', // Dark Gray
+                        dim: '#888888',
+                    },
+                    fontFamily: {
+                        sans: ['"Courier New"', 'Courier', 'monospace'],
+                        mono: ['"Courier New"', 'Courier', 'monospace'],
+                    },
+                    animation: {
+                        'cursor': 'cursor .75s step-end infinite',
+                    },
+                    keyframes: {
+                        cursor: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for terminal look */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000000;
+            border-left: 1px solid #333;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f59e0b;
+            border: 1px solid #000;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b45309;
+        }
+        body {
+            background-color: #000000;
+            color: #e2e8f0;
+        }
+        ::selection {
+            background: #f59e0b;
+            color: #000000;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-background text-slate-300 antialiased font-mono">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
